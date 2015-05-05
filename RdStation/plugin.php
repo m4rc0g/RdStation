@@ -30,18 +30,18 @@ defined( 'ABSPATH' ) or die( 'Sorry, you can\'t access directly!' );
 
 //add menu to admin panel
 if ( is_admin() ) {
-	add_action( 'admin_menu', 'rd_menu' );
-	add_action( 'admin_init', 'rd_register' );
+  add_action( 'admin_menu', 'rd_menu' );
+  add_action( 'admin_init', 'rd_register' );
 }
 
 //add sub menu page to the Settings menu
 function rd_menu() {
-	add_options_page( 'RdStation Connect', 'RdStation', 'manage_options', 'plugin.php',  'rd_rdstation_options' );
+  add_options_page( 'RdStation Connect', 'RdStation', 'manage_options', 'plugin.php',  'rd_rdstation_options' );
 }
 
 //register a setting and sanitization callback	
 function rd_register() {
-	register_setting( 'rd_optiongroup', 'rd_token' );
+  register_setting( 'rd_optiongroup', 'rd_token' );
 }
 
 //print the field for token
@@ -50,42 +50,41 @@ function rd_rdstation_options() { ?>
 <div class="wrap">
   <div id="icon-options-general" class="icon32"><br/></div>
     <h2>RdStation Connect</h2>
-	  <p>Adicione seu token RdStation aqui</p>
-	  <p>Caso não saiba acesse seu <a href="https://www.rdstation.com.br/integracoes" target="_blank"> perfil aqui</a></p>
-	    <form method="post" action="options.php">
-		<?php settings_fields('rd_optiongroup'); ?>
-
-		  <table class="form-table" style="margin-top: 20px; padding-bottom:10px; border: 1px dotted #ccc; border-width: 1px 0;">
-		  	<tr valign="top">
-		  	  <th scope="row">
-		  	  	<h3 style="margin-top: 10px";>Token</h3>
-			  </th>
-			</tr>
-			<tr>
-			  <td>
-			    <input type="password" name="rd_token" value="<?php echo get_option( 'rd_token' ); ?>" style="width: 400px; padding: 10px;">
-			  </td>
-			</tr>
-		  </table>
-		  
-		  <p class="submit">
-		    <input type="submit" class="button-primary" value="Save Changes"/>
-  		  </p>
-  		  	
-	    </form>
+      <p>Adicione seu token RdStation aqui</p>
+      <p>Caso não saiba acesse seu <a href="https://www.rdstation.com.br/integracoes" target="_blank"> perfil aqui</a></p>
+        <form method="post" action="options.php">
+        <?php settings_fields('rd_optiongroup'); ?>
+        
+          <table class="form-table" style="margin-top: 20px; padding-bottom:10px; border: 1px dotted #ccc; border-width: 1px 0;">
+            <tr valign="top">
+              <th scope="row">
+              	<h3 style="margin-top: 10px";>Token</h3>
+              </th>
+            </tr>
+            <tr>	 
+              <td>
+                <input type="password" name="rd_token" value="<?php echo get_option( 'rd_token' ); ?>" style="width: 400px; padding: 10px;">
+              </td>
+            </tr>
+          </table>
+          
+          <p class="submit">
+            <input type="submit" class="button-primary" value="Save Changes"/>
+          </p>
+        </form>
 </div>
 <?php
 }
 //create new action hook rd_station
 function rd_rdstation() {
-	do_action( 'rd_rdstation' );
+  do_action( 'rd_rdstation' );
 }
 		
 add_action( 'rd_rdstation', 'rd_rdstation_output' );
 
 function rd_rdstation_output() {
-	//print token
-	echo get_option( 'rd_token' );
+  //print token
+  echo get_option( 'rd_token' );
 }
 
 /**
