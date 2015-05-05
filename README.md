@@ -5,7 +5,7 @@ This is a simple plugin to connect your RdStation to your WordPress without chan
 If you have changed before your functions.php it won't work properly. 
 
 <h3>How to install</h3>
-Just download the RdStation.zip<br>
+Just download the RdStation.zip <a href="http://www.pixelcake.com.br/RdStation">here</a><br>
 Open your admin WordPress<br>
 Go to Plugins > Add New > Upload Plugin<br>
 Find your zip file and upload it.<br>
