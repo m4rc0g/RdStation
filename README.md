@@ -16,5 +16,5 @@ Just fill with your token.
 
 Now you have to install Contact Form 7 plugin and set the fields to work properly with your RdStation.<br>
 
-You can find more information <a href="https://github.com/ResultadosDigitais/rdocs/blob/master/integration_wp_cf7.md">here</a>
+You can find more information <a href="https://github.com/ResultadosDigitais/rdocs">here</a>
 
