@@ -16,7 +16,7 @@ Activate your plugin.<br>
 Then go to Settings > RdStation<br>
 Just fill with your token.
 
-Now you have to install Contact Form 7 plugin and set the fields to work properly with your RdStation.<br>
+Now you have to <a href="https://wordpress.org/plugins/contact-form-7/">install Contact Form 7 plugin</a> and set the fields to work properly with your RdStation.<br>
 
 <h3>Contact form 7 example</h3>
 
