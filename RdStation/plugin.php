@@ -26,7 +26,6 @@ License:
    
 */
 //Disalow access file directly
-
 defined( 'ABSPATH' ) or die( 'Sorry, you can\'t access directly!' );
 
 //add menu to admin panel
@@ -47,33 +46,34 @@ function rd_register() {
 
 //print the field for token
 function rd_rdstation_options() { ?>
-	<div class="wrap">
-		<div id="icon-options-general" class="icon32"><br/></div>
-		<h2>RdStation Connect</h2>
-		<p>Adicione seu token RdStation aqui</p>
-		<p>Caso não saiba acesse seu <a href="https://www.rdstation.com.br/integracoes" target="_blank"> perfil aqui</a></p>
-		<form method="post" action="options.php">
-			<?php settings_fields('rd_optiongroup'); ?>
-			
-			<table class="form-table" style="margin-top: 20px; padding-bottom:10px; border: 1px dotted #ccc; border-width: 1px 0;">
-				<tr valign="top">
-					<th scope="row">
-						<h3 style="margin-top: 10px";>
-							Token
-						</h3>
-					</th>
-				</tr>
-				<tr>
-					<td>
-						<input type="password" name="rd_token" value="<?php echo get_option( 'rd_token' ); ?>" style="width: 400px; padding: 10px;">
-					</td>
-				</tr>
-			</table>
-			<p class="submit">
-				<input type="submit" class="button-primary" value="Save Changes"/>
-			</p>	
-		</form>
-	</div>
+
+<div class="wrap">
+  <div id="icon-options-general" class="icon32"><br/></div>
+    <h2>RdStation Connect</h2>
+	  <p>Adicione seu token RdStation aqui</p>
+	  <p>Caso não saiba acesse seu <a href="https://www.rdstation.com.br/integracoes" target="_blank"> perfil aqui</a></p>
+	    <form method="post" action="options.php">
+		<?php settings_fields('rd_optiongroup'); ?>
+
+		  <table class="form-table" style="margin-top: 20px; padding-bottom:10px; border: 1px dotted #ccc; border-width: 1px 0;">
+		  	<tr valign="top">
+		  	  <th scope="row">
+		  	  	<h3 style="margin-top: 10px";>Token</h3>
+			  </th>
+			</tr>
+			<tr>
+			  <td>
+			    <input type="password" name="rd_token" value="<?php echo get_option( 'rd_token' ); ?>" style="width: 400px; padding: 10px;">
+			  </td>
+			</tr>
+		  </table>
+		  
+		  <p class="submit">
+		    <input type="submit" class="button-primary" value="Save Changes"/>
+  		  </p>
+  		  	
+	    </form>
+</div>
 <?php
 }
 //create new action hook rd_station
@@ -87,7 +87,6 @@ function rd_rdstation_output() {
 	//print token
 	echo get_option( 'rd_token' );
 }
-
 
 /**
  * RD Station - Integrações
@@ -131,6 +130,7 @@ function addLeadConversionToRdstationCrm( $rdstation_token, $identifier, $data_a
     }
   } catch (Exception $e) { }
 }
+
 function addLeadConversionToRdstationCrmViaWpCf7( $cf7 ) {
   $token_rdstation = get_option( 'rd_token' );
   $submission = WPCF7_Submission::get_instance();
@@ -140,4 +140,5 @@ function addLeadConversionToRdstationCrmViaWpCf7( $cf7 ) {
     }
   addLeadConversionToRdstationCrm($token_rdstation, null, $form_data);
 }
+
 add_action('wpcf7_mail_sent', 'addLeadConversionToRdstationCrmViaWpCf7');  				
