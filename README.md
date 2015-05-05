@@ -18,7 +18,7 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
 
 <h3>Contact form 7 example</h3>
 
-<code>
+<pre>
 <p>Your name (required)<br />
     [text* your-name] </p>
 
@@ -32,7 +32,7 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
     [textarea your-message] </p>
 
 <p>[submit "Send"]</p>
-</code>
+
 <div style="display:none;">
 [text identificador "YOUR IDENTIFIER"]
 [text c_utmz id:cookieutmz ""]
@@ -40,6 +40,6 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
 <script type="text/javascript">
 function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d<c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("cookieutmz").value=read_cookie("__utmz")}catch(err){}
 </script>
-
+</pre>
 You can find more information <a href="https://github.com/ResultadosDigitais/rdocs">here</a>
 
