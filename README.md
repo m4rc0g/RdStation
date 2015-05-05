@@ -18,6 +18,7 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
 
 <h3>Contact form 7 example</h3>
 
+<code>
 <p>Your name (required)<br />
     [text* your-name] </p>
 
@@ -31,7 +32,7 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
     [textarea your-message] </p>
 
 <p>[submit "Send"]</p>
-
+</code>
 <div style="display:none;">
 [text identificador "YOUR IDENTIFIER"]
 [text c_utmz id:cookieutmz ""]
