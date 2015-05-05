@@ -1,6 +1,8 @@
 # RdStation
 Plugin to connect RdStation to WordPress based on <a href="https://github.com/ResultadosDigitais/rdocs/blob/master/integration_wp_cf7_3_9%2B.md">Resultados Digitais RdDocs.</a>
 
+<strong>Tested on WordPress 4.2.1</strong>
+
 This is a simple plugin to connect your RdStation to your WordPress without changing your functions.php.
 If you have changed before your functions.php it won't work properly. 
 
