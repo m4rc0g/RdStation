@@ -18,28 +18,28 @@ Now you have to install Contact Form 7 plugin and set the fields to work properl
 
 <h3>Contact form 7 example</h3>
 
-<pre>
-<p>Your name (required)<br />
-    [text* your-name] </p>
+<pre><code>&lt;p&gt;Your name (required)&lt;br /&gt;
+    [text* your-name] &lt;/p&gt;
 
-<p>Your e-mail (required)<br />
-    [email* email] </p>
+&lt;p&gt;Your e-mail (required)&lt;br /&gt;
+    [email* email] &lt;/p&gt;
 
-<p>Subject<br />
-    [text your-subject] </p>
+&lt;p&gt;Subject&lt;br /&gt;
+    [text your-subject] &lt;/p&gt;
 
-<p>Message<br />
-    [textarea your-message] </p>
+&lt;p&gt;Message&lt;br /&gt;
+    [textarea your-message] &lt;/p&gt;
 
-<p>[submit "Send"]</p>
+&lt;p&gt;[submit "Send"]&lt;/p&gt;
 
-<div style="display:none;">
+&lt;div style="display:none;"&gt;
 [text identificador "YOUR IDENTIFIER"]
 [text c_utmz id:cookieutmz ""]
-</div>
-<script type="text/javascript">
-function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d<c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("cookieutmz").value=read_cookie("__utmz")}catch(err){}
-</script>
-</pre>
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d&lt;c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("cookieutmz").value=read_cookie("__utmz")}catch(err){}
+&lt;/script&gt;
+</code></pre>
+
 You can find more information <a href="https://github.com/ResultadosDigitais/rdocs">here</a>
 
